@@ -18,6 +18,9 @@
     "@hilla/react-components": "2.3.0",
     "@hilla/react-crud": "2.5.7",
     "@hilla/react-form": "2.5.7",
+    "@nextui-org/button": "^2.0.31",
+    "@nextui-org/link": "^2.0.29",
+    "@nextui-org/navbar": "^2.0.30",
     "@polymer/polymer": "3.5.1",
     "@vaadin/bundles": "24.3.0",
     "@vaadin/common-frontend": "0.0.19",
@@ -26,7 +29,7 @@
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "3.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.0",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
@@ -38,10 +41,13 @@
     "@vitejs/plugin-react": "4.2.1",
     "@vitejs/plugin-react-swc": "3.5.0",
     "async": "3.2.4",
+    "autoprefixer": "^10.4.19",
     "glob": "10.3.3",
+    "postcss": "^8.4.38",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.12.0",
     "strip-css-comments": "5.0.0",
+    "tailwindcss": "^3.4.3",
     "transform-ast": "2.4.4",
     "typescript": "5.3.3",
     "vite": "5.1.1",
@@ -75,7 +81,10 @@
     "@hilla/generator-typescript-plugin-subtypes": "$@hilla/generator-typescript-plugin-subtypes",
     "@hilla/react-crud": "$@hilla/react-crud",
     "@hilla/generator-typescript-plugin-backbone": "$@hilla/generator-typescript-plugin-backbone",
-    "@hilla/generator-typescript-cli": "$@hilla/generator-typescript-cli"
+    "@hilla/generator-typescript-cli": "$@hilla/generator-typescript-cli",
+    "@nextui-org/button": "$@nextui-org/button",
+    "@nextui-org/link": "$@nextui-org/link",
+    "@nextui-org/navbar": "$@nextui-org/navbar"
   },
   "vaadin": {
     "dependencies": {
@@ -119,6 +128,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "f5434ac024f73dbe8b84e89785c56733a3040983f15b93a1cfe01e73329677d0"
+    "hash": "361a7a1dd5adf21c9b0a94894282fabbdd01ee40c944215c326e3a9eb14f7245"
   }
 }

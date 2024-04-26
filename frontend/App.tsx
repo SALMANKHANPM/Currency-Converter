@@ -1,3 +1,4 @@
+import "./main.css";
 import router from 'Frontend/routes.js';
 import { RouterProvider } from 'react-router-dom';
 
