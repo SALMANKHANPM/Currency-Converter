@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <!-- Project from https://start.vaadin.com/project/f6e97d39-ba7f-43d8-bced-02e9deaa2309 -->
     <groupId>com.example.application</groupId>
     <artifactId>hilla-tailwind</artifactId>
@@ -12,7 +13,17 @@
     <properties>
         <java.version>21</java.version>
         <hilla.version>2.5.7</hilla.version>
+        <vaadin.version>24.3.10</vaadin.version>
     </properties>
+    <pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+</pluginRepositories>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -46,8 +57,10 @@
             <artifactId>line-awesome</artifactId>
             <version>2.0.0</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
@@ -71,6 +84,16 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
 
             <plugin>
                 <groupId>dev.hilla</groupId>
@@ -93,6 +116,19 @@
             <id>production</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>vaadin-maven-plugin</artifactId>
+                        <version>${vaadin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>build-frontend</goal>
+                                </goals>
+                                <phase>compile</phase>
+                            </execution>
+                        </executions>
+                                            </plugin>
                     <plugin>
                         <groupId>dev.hilla</groupId>
                         <artifactId>hilla-maven-plugin</artifactId>

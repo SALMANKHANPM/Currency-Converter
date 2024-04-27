@@ -12,10 +12,8 @@ export default function MainLayout() {
     // Replace javascript:void(0) path with your path
     const navigation = [
         { title: "Home", path: "/" },
-        { title: "API Access", path: "javascript:void(0)" },
-        { title: "Source Code", path: "javascript:void(0)" },
-        { title: "", path: "javascript:void(0)" },
-        { title: "", path: "javascript:void(0)" }
+        { title: "API Access", path: "https://www.exchangerate-api.com/" },
+        { title: "Source Code", path: "https://github.com/SALMANKHANPM/Currency-Converter" },
     ]
 
     return (

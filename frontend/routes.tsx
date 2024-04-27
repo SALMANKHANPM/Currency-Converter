@@ -10,7 +10,7 @@ const routing = [
     element: <MainLayout />,
     handle: { title: 'Main' },
     children: [
-      { path: '/', element: <CurrencyConverterView />, handle: { title: 'Hello World' } },
+      { path: '/', element: <CurrencyConverterView />, handle: { title: 'Currency Converter' } },
       { path: '/about', element: <AboutView />, handle: { title: 'About' } },
     ],
   },
